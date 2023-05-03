@@ -1,0 +1,45 @@
+
+html{
+    background-color: #ddd;
+}
+
+body{
+    background-color: #333;
+}
+
+header {
+    background-color: #555;
+}
+
+main{
+    background-color: #555;
+}
+
+footer{
+    background-color: #555;
+}
+
+h1{
+    text-align: center;
+    border-radius: 5px;
+}
+
+aside{
+    background-color: #555;
+}
+
+section{
+    background-color: #555;
+}
+
+article{
+    background-color: #bbb;
+}
+
+h2{
+    /* background-color: #aaa; */
+}
+
+p{
+    /* background-color: #aaa; */
+}

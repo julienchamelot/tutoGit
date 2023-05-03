@@ -1,0 +1,22 @@
+@import url("layout_header.css");
+@import url("layout_main.css");
+@import url("layout_footer.css");
+
+/* defini la taille maxi de la page en largeur */
+html {
+    margin: 0px;
+    margin: auto;
+}
+
+header{
+    position:sticky;
+    top : 0px ;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+}
+
+
+

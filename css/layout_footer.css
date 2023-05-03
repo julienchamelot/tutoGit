@@ -1,0 +1,32 @@
+footer nav {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+
+}
+
+footer nav a {
+    /* background-color: green; */
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    
+    flex-basis: 5%;
+
+
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    color: #ddd;
+
+}
+
+footer nav a:hover {
+    background-color: #ddd;
+    color: #555;
+
+}

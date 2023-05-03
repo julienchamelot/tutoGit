@@ -1,0 +1,283 @@
+[
+    {
+        "id": 100,
+        "titre1": "Naviguer dans l’arborescence des fichiers et répertoires",
+        "chapitre": "naviguer"
+    },
+    {
+        "id": 110,
+        "titre1": "Naviguer dans l’arborescence des fichiers et répertoires",
+        "chapitre": "naviguer",
+        "titre2": "Ce placer dans le répertoire de notre projet",
+        "paragraphe_avant": "Remarque: on peut toujours utiliser la touche tabulation pour utiliser la completion",
+        "commande": "cd /d/www/TutoGit",
+        "code": "Lulu@Lulu-T450 MINGW64 ~<br> $ cd /d/www/TutoGit <br><br>Lulu@Lulu-T450 MINGW64 /d/www/TutoGit <br>$",
+        "paragraphe_apres": "Ici, on peut constater que l'invite de commande a changer, elle comporte le chemain du répertoire en cours"
+    },
+    {
+        "id": 120,
+        "titre1": "Naviguer dans l’arborescence des fichiers et répertoires",
+        "chapitre": "naviguer",
+        "titre2": "Ce placer dans le répertoire de notre projet",
+        "paragraphe_avant": "On peut également utiliser les commande standard cd ou cd ..",
+        "commande": "cd MonRep",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/tutoGit <br> $ cd MonRep"
+    },
+    {
+        "id": 130,
+        "titre1": "Naviguer dans l’arborescence des fichiers et répertoires",
+        "chapitre": "naviguer",
+        "titre2": "Afficher le répertoire courant",
+        "commande": "pwd",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit <br> $ pwd <br> &nbsp;&nbsp;/d/www/TutoGit"
+    },
+    {
+        "id": 140,
+        "titre1": "Naviguer dans l’arborescence des fichiers et répertoires",
+        "chapitre": "naviguer",
+        "titre2": "Créer un répertoir",
+        "commande": "mkdir NouveauRep",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit <br> $ mkdir NouveauRep"
+    },
+    {
+        "id": 150,
+        "titre1": "Naviguer dans l’arborescence des fichiers et répertoires",
+        "chapitre": "naviguer",
+        "titre2": "Supprimer un répertoir",
+        "commande": "rm -r NouveauRep",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit <br> $ rm -r NouveauRep"
+    },
+    {
+        "id": 200,
+        "titre1": "Initialisation du projet",
+        "chapitre": "initilaiser"
+    },
+    {
+        "id": 210,
+        "titre1": "Initialisation du projet",
+        "chapitre": "initilaiser",
+        "titre2": "Créer le répertoire .git",
+        "paragraphe_avant": "Pour travailler git a besoin d'un répertoire pour stocker les versions et plein d'autre chose.",
+        "commande": "git init",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit <br> $ git init <br> &nbsp;&nbsp;Initialized empty Git repository in D:/www/TutoGit/.git/ <br> Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master) <br> $",
+        "paragraphe_apres": "Ici, on peut consater que l'invite de commande se termine par (master), c'est la branche dans lequel on se trouve "
+    },
+    {
+        "id": 220,
+        "titre1": "Initialisation du projet",
+        "chapitre": "initilaiser",
+        "titre2": "Configurer le nom de l’utilisateur",
+        "paragraphe_avant": "Comme plusieurs personnes peuvent travailler sur le même projet, il est important de specifier le nom des personnes qui le modifie <br> git config --global user.name &lt;nom de l'utilisateur>",
+        "commande": "git config --global user.name &lt;nom de l'utilisateur>",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master) <br> $ git config --global user.name \"Julien C\"",
+        "paragraphe_apres": ""
+    },
+    {
+        "id": 230,
+        "titre1": "Initialisation du projet",
+        "chapitre": "initilaiser",
+        "titre2": "Configurer le mail de l’utilisateur",
+        "paragraphe_avant": "Permet de commoniquer avec l'un des membre du projet",
+        "commande": "git config --global user.email &lt;adresse mail de l'utilisateur>",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master) <br> $ git config --global user.email julien.chamelot@gmail.com",
+        "paragraphe_apres": ""
+    },
+    {
+        "id": 300,
+        "titre1": "Sauvergarder le projet",
+        "chapitre": "sauvergarder"
+    },
+    {
+        "id": 310,
+        "titre1": "Sauvergarder le projet ",
+        "chapitre": "sauvergarder",
+        "titre2": "Vue de la vie de notre projet",
+        "paragraphe_avant": "Le but est d'assurer un retour en arrière de notre projet. Toutes les étapes sont sauvegardés au fur et à mesure des divers modifications.",
+        "image": "images/git-commit.png",
+        "image_alt": "vue de nos premiers commits"
+    },
+    {
+        "id": 320,
+        "titre1": "Sauvergarder le projet ",
+        "chapitre": "sauvergarder",
+        "titre2": "Ajouter un fichier spécifique pour préparer la sauvegarde",
+        "commande": "git add index.html",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (master) <br>$ git add index.html"
+    },
+    {
+        "id": 330,
+        "titre1": "Sauvergarder le projet ",
+        "chapitre": "sauvergarder",
+        "titre2": " Ajouter tous les fichiers pour préparer la sauvegarde",
+        "commande": "git add .",
+        "code": " Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master) <br>$ git add ."
+    },
+    {
+        "id": 340,
+        "titre1": "Sauvergarder le projet ",
+        "chapitre": "sauvergarder",
+        "titre2": " Afficher les modifications qui vont être sauvegardées",
+        "commande": " git status",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master) <br> $ git status <br> &nbsp;&nbsp;On branch master <br> &nbsp;&nbsp;No commits yet <br> Changes to be committed: <br> &nbsp;&nbsp;(use &#34; git rm --cached &lt;file>...&#34; to unstage) <br> &nbsp;&nbsp;new file: index.html <br>",
+        "paragraphe_apres": "Ici, on peut constater qu'un fichier sera ajouté au projet dans la branche master."
+    },
+    {
+        "id": 350,
+        "titre1": "Sauvergarder le projet ",
+        "chapitre": "sauvergarder",
+        "titre2": "Créer une sauvegarde avec un commentaire sur la version",
+        "paragraphe_avant": "Il est important de soigner le commentaire, il sera très utile pour revenir en arrière en cas de problème.",
+        "commande": "git commit -m &#34;message&#34;",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master) <br>  $ git commit -m &#34;création du projet&#34; <br> &nbsp;&nbsp;[master (root-commit) 71854b6] création du projet <br> &nbsp;&nbsp;1 file changed, 0 insertions(+), 0 deletions(-) <br> &nbsp;&nbsp;create mode 100644 index.html"
+    },
+    {
+        "id": 360,
+        "titre1": "Sauvergarder le projet ",
+        "chapitre": "sauvergarder",
+        "titre2": "Restorer au dernier commit",
+        "paragraphe_avant": " S'il on rencontre un problème dans notre code, on peut annuler les derniers changements. Mais attention, les dérnières modifications seront perdus. Dans ce cas les fichiers du projets revient à l'état du dernier commit. <br>Pour éviter de perdre les dernières modifications, il est préferable de créer une sauvegarde, revenir en arière et créer une nouvelle branche.",
+        "image": "",
+        "image_alt": "",
+        "commande": "git reset HEAD --hard",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master) <br> $ git reset HEAD --hard <br> &nbsp;&nbsp;HEAD is now at d118b7a version 3"
+    },
+    {
+        "id": 400,
+        "titre1": "Affichager l’historique des versions",
+        "chapitre": "affichier"
+    },
+    {
+        "id": 410,
+        "titre1": "Affichager l’historique des versions",
+        "chapitre": "affichier",
+        "titre2": " Afficher l’historique",
+        "commande": "git log",
+        "code": " Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (master) <br> $ git log<br>         commit e760d0bed6d97cbca70225a9e60503d245d88d81 (HEAD -> master) <br> Author: Julien C &lt;julien.chamelot@gmail.com> <br>Date: Wed Apr 12 22:44:02 2023 +0200<br>&nbsp;&nbsp;version 3<br>commit 4f125a34d73b4f9fd85881f2bd3ba52e6cf20420<br>Author: Julien C &lt;julien.chamelot@gmail.com> <br>Date: Wed Apr 12 22:43:45 2023 +0200<br>&nbsp;&nbsp;version 2<br>commit f916c4402e2ee8a1a1d240ef413b199f4688b1ef<br>Author: Julien C &lt;julien.chamelot@gmail.com> <br>Date: Wed Apr 12 22:42:06 2023 +0200<br>&nbsp;&nbsp;version 1<br>commit 71854b6c7cb7e31faeb746cb227abd3a73c0f727<br>Author: Julien C &lt;julien.chamelot@gmail.com> <br>Date: Wed Apr 12 22:38:24 2023 +0200<br>&nbsp;&nbsp;création du projet<br>Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (master) <br>$ <br>",
+        "paragraphe_apres": "Ici, on retrouve : L'identifiant des commit, le nom, le mail de l'auteur, la date, et le commentaire dechaque commit<br> <p>Attention git est riche en information, quand le text à afficher est trop long, il ouvre vi pouvoir naviguer dans le text. Pour quiter vi, il faut taper wq "
+    },
+    {
+        "id": 420,
+        "titre1": "Affichager l’historique des versions",
+        "chapitre": "affichier",
+        "titre2": " Afficher seulement les 2 dernières sauvegardes",
+        "commande": " git log -n 2",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (master) <br> $ git log -n 2<br>  commit e760d0bed6d97cbca70225a9e60503d245d88d81 (HEAD -> master) <br>        Author: Julien C &lt;julien.chamelot@gmail.com> <br>        Date: Wed Apr 12 22:44:02 2023 +0200<br>        &nbsp;&nbsp;version 3<br>       commit 4f125a34d73b4f9fd85881f2bd3ba52e6cf20420<br>       Author: Julien C &lt;julien.chamelot@gmail.com> <br>        Date: Wed Apr 12 22:43:45 2023 +0200<br>       &nbsp;&nbsp;version 2<br>"
+    },
+    {
+        "id": 430,
+        "titre1": "Affichager l’historique des versions",
+        "chapitre": "affichier",
+        "titre2": "Affichager avec un commit par ligne",
+        "commande": "  git log --oneline",
+        "code": " Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master)<br>        $ git log --oneline<br>        e760d0b (HEAD -> master) version 3<br>        4f125a3 version 2<br>        f916c44 version 1<br>        71854b6 création du projet<br>",
+        "paragraphe_apres": ""
+    },
+    {
+        "id": 500,
+        "titre1": "Travailler avec les branch",
+        "chapitre": "branch"
+    },
+    {
+        "id": 510,
+        "titre1": "Travailler avec les branch",
+        "chapitre": "branch",
+        "titre2": " Vue des branch",
+        "paragraphe_avant": "Le but ici est de travailler sur plusieurs modifications en même temps. <br> Il est important de garder en tête que l'on ne modifie pas directement la branche principale. On préfère effectuer de petites modifications avant de les valider et de proposer une nouvelle version du projet",
+        "image": "images/git-branch.png"
+    },
+    {
+        "id": 520,
+        "titre1": "Travailler avec les branch",
+        "chapitre": "branch",
+        "titre2": " Créer une branche",
+        "commande": " git branch &lt;nom de la nouvelle branche>",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (master) <br> $ git branch dev",
+        "paragraphe_apres": ""
+    },
+    {
+        "id": 530,
+        "titre1": "Travailler avec les branch",
+        "chapitre": "branch",
+        "titre2": " Se déplacer dans la branche",
+        "commande": " git checkout &lt;nom de la nouvelle branche>",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (master) <br> $ git checkout dev <br> &nbsp;&nbsp;Switched to branch 'dev' <br>  Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (dev) <br> $"
+    },
+    {
+        "id": 540,
+        "titre1": "Travailler avec les branch",
+        "chapitre": "branch",
+        "titre2": "Afficher les branches",
+        "commande": " git branch",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (master) <br> $ git branch <br> dev <br> * master",
+        "paragraphe_apres": "Remarque: une étoile apparaît devant la branche en cours"
+    },
+    {
+        "id": 550,
+        "titre1": "Travailler avec les branch",
+        "chapitre": "branch",
+        "titre2": "Supprime une branche",
+        "commande": " git branch -d &lt;nom de la branche à supprimer>",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (master) <br> $ git branch -d dev2 <br> &nbsp;&nbsp;git branch -d  dev2 (was e760d0b).",
+        "paragraphe_apres": "Remarque: on ne peut pas supprimer une branche dont les sauvegardes n'ont pas été rassemblées"
+    },
+    {
+        "id": 560,
+        "titre1": "Travailler avec les branch",
+        "chapitre": "branch",
+        "titre2": " Affichager un commit par ligne et arborescence des branches",
+        "commande": " git log --graph --all --oneline",
+        "code": " Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master) <br> $ git log --graph --all --oneline <br>  * 4f75b6e (dev) Modif 2 <br>  * 9eddcf3 Modif 1 <br>  | * e760d0b (HEAD -> master) version 3 <br>  | * 4f125a3 version 2 <br>  | * f916c44 version 1 <br>   |/ <br>        * 71854b6 création du projet <br>"
+    },
+    {
+        "id": 600,
+        "titre1": "Fusionner les branches",
+        "chapitre": "fussion"
+    },
+    {
+        "id": 610,
+        "titre1": "Fusionner les branches",
+        "chapitre": "fussion",
+        "titre2": "Fusionner les branches",
+        "paragraphe_avant": "Le but ici est de rassembler deux branches de dévelopement.",
+        "image": "images/git-merge.png",
+        "image_alt": "merge"
+    },
+    {
+        "id": 620,
+        "titre1": "Fusionner les branches",
+        "chapitre": "fussion",
+        "titre2": "Revenir sur la branche principale",
+        "commande": " git checkout master",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (dev) <br>       $ git checkout master<br>        &nbsp;&nbsp;Switched to branch 'master'<br>        Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master)<br>        $<br>"
+    },
+    {
+        "id": 630,
+        "titre1": "Fusionner les branches",
+        "chapitre": "fussion",
+        "titre2": "Fusionner les branches",
+        "paragraphe_avant": "Fusionner les branches en gardant les modifs des deux branches et en affichant les confits éventuels",
+        "commande": "git merge &lt;nom de la branche a fusionner>",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master) <br>       $ git merge dev<br>        &nbsp;&nbsp;Auto-merging index.html<br>        &nbsp;&nbsp;CONFLICT (content): Merge conflict in index.html<br>        &nbsp;&nbsp;Automatic merge failed; fix conflicts and then commit the result.<br>        <br>        Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master|MERGING)<br>        $",
+        "paragraphe_apres": "Remarque : en cas de conflit, git garde les lignes des deux versions et ajoute des commentaire dans les         fichiers. Vous devez resoudre ces conflits et refaire un commit avant de pouvoir continuer."
+    },
+    {
+        "id": 640,
+        "titre1": "Fusionner les branches",
+        "chapitre": "fussion",
+        "titre2": " Affichage des branch",
+        "commande": "git log --graph --oneline --all",
+        "code": "Lulu@Lulu-T450 MINGW64 /d/www/TutoGit (master) <br>        $ git log --graph --oneline --all<br>        * 1bc7a45 (HEAD -> master) resolution de conflit<br>        |\\<br>        | * 4f75b6e (dev) Modif 2<br>        | * 9eddcf3 Modif 1<br>        * | e760d0b version 3<br>        * | 4f125a3 version 2<br>        * | f916c44 version 1<br>        |/<br>        * 71854b6 création du projet<br>"
+    },
+    {
+        "id": 1,
+        "titre1": "essai titre 1",
+        "chapitre": "essai",
+        "titre2": "essai Titre 2",
+        "paragraphe_avant": "essai paragraphe avant Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, veniam. Accusamus veniam aut pariatur, assumenda minus quis nostrum. Sint saepe sed tenetur consequuntur officiis voluptas error possimus ullam voluptatibus distinctio.",
+        "image": "images/git-branch.png",
+        "image_alt": "text alternatif",
+        "commande": "format C:",
+        "code": "$format c:/<br>plus rien      !",
+        "paragraphe_apres": "essai paragraphe après Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, veniam. Accusamus veniam aut pariatur, assumenda minus quis nostrum. Sint saepe sed tenetur consequuntur officiis voluptas error possimus ullam voluptatibus distinctio."
+    }
+]

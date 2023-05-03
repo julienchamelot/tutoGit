@@ -1,0 +1,76 @@
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    overflow: auto;
+}
+
+aside a {
+
+    text-decoration: none;
+    color: #ccc;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+aside a:hover {
+    background-color: #ccc;
+    color: #555;
+}
+
+section {
+    flex: 5;
+    margin-top: 5px;
+}
+
+article {
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+article h2 {
+    margin-top: 0px;
+}
+
+article img {
+    width: 100%;
+}
+
+.press_papier {
+    font-family: monospace;
+    background-color: #ddd;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 1px;
+}
+
+div.code {
+    background-color: rgb(12, 12, 12);
+    color: rgb(204, 204, 204);
+
+    padding: 5px;
+    margin: 0px;
+    border: 2px solid #ddd;
+
+    font-family: monospace;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside {
+        order: 1;
+    }
+}

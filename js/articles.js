@@ -1,9 +1,9 @@
 // le fichier article.jason est lu 
-const reponseArticles = await fetch('articles.json');
+const reponseArticles = await fetch('json/articles.json');
 // Les objets du fichier article.json sont chargé dans le tableau articles
 const articles = await reponseArticles.json();
 
-const reponseTitres = await fetch('titreArticles.json');
+const reponseTitres = await fetch('json/titreArticles.json');
 const titres = await reponseTitres.json();
 
 

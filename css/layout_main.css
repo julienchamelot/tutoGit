@@ -73,6 +73,6 @@ div.code {
     }
 
     aside {
-        /* order: 1; */
+        order: 1;
     }
 }

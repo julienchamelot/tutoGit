@@ -1,13 +1,7 @@
 @import url("layout_header.css");
 @import url("layout_main.css");
 @import url("layout_footer.css");
-
-/* defini la taille maxi de la page en largeur */
-html {
-    margin: 0px;
-    padding: 0px;
-    margin: auto;
-}
+@import url("color_style.css");
 
 header{
     position:sticky;

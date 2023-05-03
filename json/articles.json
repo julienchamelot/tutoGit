@@ -2,16 +2,16 @@
         {
         "id": 110,
          "chapitre": "naviguer",
-        "titre": "Ce placer dans le répertoire de notre projet",
+        "titre": "Se placer dans le répertoire de notre projet",
         "paragraphe_avant": "Remarque: on peut toujours utiliser la touche tabulation pour utiliser la completion",
         "commande": "cd /d/www/TutoGit",
         "code": "Lulu@Lulu-T450 MINGW64 ~<br> $ cd /d/www/TutoGit <br><br>Lulu@Lulu-T450 MINGW64 /d/www/TutoGit <br>$",
-        "paragraphe_apres": "Ici, on peut constater que l'invite de commande a changer, elle comporte le chemain du répertoire en cours"
+        "paragraphe_apres": "Ici, on peut constater que l'invite de commande à changer, elle comporte le chemain du répertoire en cours"
     },
     {
         "id": 120,
         "chapitre": "naviguer",
-        "titre": "Ce placer dans le répertoire de notre projet",
+        "titre": "Se placer dans le répertoire de notre projet",
         "paragraphe_avant": "On peut également utiliser les commande standard cd ou cd ..",
         "commande": "cd MonRep",
         "code": "Lulu@Lulu-T450 MINGW64 /d/www/tutoGit <br> $ cd MonRep"

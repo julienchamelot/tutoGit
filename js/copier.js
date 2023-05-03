@@ -14,7 +14,6 @@
 </body>
 
 */
-// coucou
 
 function copierTexte(textAcopier) {
     navigator.clipboard.writeText(textAcopier)

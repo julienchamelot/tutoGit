@@ -1,37 +1,37 @@
 [
     {
         "id": 100,
-        "titre1": "Naviguer dans l’arborescence des fichiers et répertoires",
+        "titre": "Naviguer dans l’arborescence des fichiers et répertoires",
         "chapitre": "naviguer"
     },
 
  {
         "id": 200,
-        "titre1": "Initialisation du projet",
+        "titre": "Initialisation du projet",
         "chapitre": "initilaiser"
     },    
 
  {
         "id": 300,
-        "titre1": "Sauvergarder le projet",
+        "titre": "Sauvergarder le projet",
         "chapitre": "sauvergarder"
     },
 
      {
         "id": 400,
-        "titre1": "Affichager l’historique des versions",
+        "titre": "Affichager l’historique des versions",
         "chapitre": "affichier"
     },
 
 {
         "id": 500,
-        "titre1": "Travailler avec les branch",
+        "titre": "Travailler avec les branch",
         "chapitre": "branch"
     },
 
      {
         "id": 600,
-        "titre1": "Fusionner les branches",
+        "titre": "Fusionner les branches",
         "chapitre": "fussion"
     }
 

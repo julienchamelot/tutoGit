@@ -1,37 +1,52 @@
-// Récupération des pièces depuis le fichier JSON
-// const articles = await fetch("tuto.json").then(pieces => pieces.json());
-
-
+// le fichier article.jason est lu 
 const reponseArticles = await fetch('articles.json');
+// Les objets du fichier article.json sont chargé dans le tableau articles
 const articles = await reponseArticles.json();
-
 
 const reponseTitres = await fetch('titreArticles.json');
 const titres = await reponseTitres.json();
 
 
 function genererMenu(titres) {
+  // On vide le contenu de la balise aside 
   document.querySelector("aside").innerHTML = '';
 
+  // on selectionne la balise aside 
   const aside_menu_main = document.querySelector("aside");
 
+  // on parcout le tableau contenant les titres 
   for (let i = 0; i < titres.length; i++) {
 
-    const titre = titres[i] ; 
-    // console.log(i);
+    // on charge les titre les un après les autres 
+    const titre = titres[i];
 
-    // Création d’une balise a
+    // pour chaque titre , on crée d’une balise a
     const titreArticles = document.createElement("a");
+
+    // on prépare les liens avec le format <a href="#" class="titre">titre du chapitre</a></li>
     titreArticles.setAttribute("class", titre.chapitre);
-    titreArticles.innerHTML = titre.titre1;
+    titreArticles.setAttribute("href", "#");
+    titreArticles.innerHTML = titre.titre;
     // On attache l'article à la section de la page  
     aside_menu_main.appendChild(titreArticles);
-  }
 
+    // Action associé aux boutons
+    const boutonFiltrer = document.querySelector(`.${titre.chapitre}`);
+
+    // fonction executé au clique sur le bouton
+    boutonFiltrer.addEventListener("click", function () {
+      // on parcout le tableau d'article et on filtre les articles qui on titre cliqué 
+      const articlesFiltrees = articles.filter(function (article) {
+        return article.chapitre == titre.chapitre;
+      });
+      // on evoie l'affichage des article filtrés
+      genererArticle(articlesFiltrees);
+    });
+  }
 }
 
 // Fonction qui génère toute la page web
-function genererArticle(articles, titres) {
+function genererArticle(articles) {
   document.querySelector("section").innerHTML = '';
 
   // Récupération de l'élément du DOM qui accueillera les articles
@@ -44,53 +59,48 @@ function genererArticle(articles, titres) {
     // On fait une copie des article un à un 
     const article = articles[i];
 
+    // Création d’une balise article
+    const articleElement = document.createElement("article");
+    // On attache l'article à la section de la page  
+    sectionArticles.appendChild(articleElement);
 
+    // On crée l’élément h2.
+    const titreArticle = document.createElement("h2");
+    // On remplit l'élèment avec les données lu dans une ligne du tableau 
+    titreArticle.innerHTML = article.titre;
+    //on attache le titre dans l'article
+    articleElement.appendChild(titreArticle);
 
-    if (article.titre2 != null) {
-      // Création d’une balise article
-      const articleElement = document.createElement("article");
-      // On attache l'article à la section de la page  
-      sectionArticles.appendChild(articleElement);
+    //On verifie la présence d'un paragraphe_avant 
+    if (article.paragraphe_avant != null) {
+      const paragraphe_avant = document.createElement("p");
+      paragraphe_avant.innerHTML = article.paragraphe_avant;
+      articleElement.appendChild(paragraphe_avant);
+    }
 
-      // On crée l’élément h2.
-      const titreArticle = document.createElement("h2");
-      // On remplit l'élèment avec les données lu dans une ligne du tableau 
-      titreArticle.innerHTML = article.titre2;
-      //on attache le titre dans l'article
-      articleElement.appendChild(titreArticle);
+    if (article.image != null) {
+      const imageArticle = document.createElement("img");
+      imageArticle.src = article.image;
+      articleElement.appendChild(imageArticle);
+    }
 
-      //On verifie la présence d'un paragraphe_avant 
-      if (article.paragraphe_avant != null) {
-        const paragraphe_avant = document.createElement("p");
-        paragraphe_avant.innerHTML = article.paragraphe_avant;
-        articleElement.appendChild(paragraphe_avant);
-      }
+    if (article.commande) {
+      const commandeArticle = document.createElement("span");
+      commandeArticle.setAttribute("class", "press_papier");
+      commandeArticle.innerHTML = article.commande;
+      articleElement.appendChild(commandeArticle);
 
-      if (article.image != null) {
-        const imageArticle = document.createElement("img");
-        imageArticle.src = article.image;
-        // imageArticle.alt = article.alt;
-        articleElement.appendChild(imageArticle);
-      }
+      const codeArticle = document.createElement("div");
+      codeArticle.setAttribute("class", "code");
+      codeArticle.innerHTML = article.code;
+      articleElement.appendChild(codeArticle);
+    }
 
-      if (article.commande) {
-        const commandeArticle = document.createElement("span");
-        commandeArticle.setAttribute("class", "press_papier");
-        commandeArticle.innerHTML = article.commande;
-        articleElement.appendChild(commandeArticle);
-
-        const codeArticle = document.createElement("div");
-        codeArticle.setAttribute("class", "code");
-        codeArticle.innerHTML = article.code;
-        articleElement.appendChild(codeArticle);
-      }
-
-      if (article.paragraphe_apres != null) {
-        const paragraphe_apres = document.createElement("p");
-        paragraphe_apres.innerText = article.paragraphe_apres;
-        articleElement.appendChild(paragraphe_apres);
-      }
-    } 
+    if (article.paragraphe_apres != null) {
+      const paragraphe_apres = document.createElement("p");
+      paragraphe_apres.innerText = article.paragraphe_apres;
+      articleElement.appendChild(paragraphe_apres);
+    }
   }
 }
 
@@ -98,34 +108,18 @@ function genererArticle(articles, titres) {
 document.querySelector("section").innerHTML = '';
 document.querySelector("aside").innerHTML = '';
 // Premier affichage de la page
-genererArticle(articles, titres);
+genererArticle(articles);
 genererMenu(titres);
+
 ///////////////////////////////////////////////////////////////////////
 
 for (let i = 0; i < articles.length; i++) {
 
   // On fait une copie des article un à un 
   const article = articles[i];
-  if (article.titre2 == null) {
 
-    let stringParm = `.${article.chapitre}`;
 
-    // console.log(stringParm);
-    const boutonFiltrer = document.querySelector(`.${article.chapitre}`);
-    // const boutonFiltrer = document.querySelector('#100');
-    // console.log(boutonFiltrer);
-    boutonFiltrer.addEventListener("click", function () {
 
-      console.log("clickkkkkk");
-      const articlesFiltrees = articles.filter(function (article2) {
-        return article2.chapitre == article.chapitre;
-      });
-      console.log(articlesFiltrees);
-      genererArticle(articlesFiltrees, titres);
-      // document.querySelector(".fiches").innerHTML = "";
-      // genererArticle(piecesFiltrees);
-    });
-  }
 }
 
 

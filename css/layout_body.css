@@ -5,6 +5,7 @@
 /* defini la taille maxi de la page en largeur */
 html {
     margin: 0px;
+    padding: 0px;
     margin: auto;
 }
 

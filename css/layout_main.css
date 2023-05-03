@@ -18,6 +18,8 @@ aside a {
     border-radius: 5px;
     margin: 5px;
     padding: 5px;
+    font-size: 1em;
+
 }
 
 aside a:hover {
@@ -71,6 +73,6 @@ div.code {
     }
 
     aside {
-        order: 1;
+        /* order: 1; */
     }
 }

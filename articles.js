@@ -2,17 +2,41 @@
 // const articles = await fetch("tuto.json").then(pieces => pieces.json());
 
 
-const reponse = await fetch('tuto.json');
-const articles = await reponse.json();
+const reponseArticles = await fetch('articles.json');
+const articles = await reponseArticles.json();
 
+
+const reponseTitres = await fetch('titreArticles.json');
+const titres = await reponseTitres.json();
+
+
+function genererMenu(titres) {
+  document.querySelector("aside").innerHTML = '';
+
+  const aside_menu_main = document.querySelector("aside");
+
+  for (let i = 0; i < titres.length; i++) {
+
+    const titre = titres[i] ; 
+    // console.log(i);
+
+    // Création d’une balise a
+    const titreArticles = document.createElement("a");
+    titreArticles.setAttribute("class", titre.chapitre);
+    titreArticles.innerHTML = titre.titre1;
+    // On attache l'article à la section de la page  
+    aside_menu_main.appendChild(titreArticles);
+  }
+
+}
 
 // Fonction qui génère toute la page web
-function genererPieces(articles) {
+function genererArticle(articles, titres) {
   document.querySelector("section").innerHTML = '';
-  document.querySelector("aside").innerHTML = '';
+
   // Récupération de l'élément du DOM qui accueillera les articles
   const sectionArticles = document.querySelector(".articles");
-  const aside_menu_main = document.querySelector("aside");
+
 
   // On parcourt chaqu'in des articles passé en paramètre
   for (let i = 0; i < articles.length; i++) {
@@ -66,16 +90,7 @@ function genererPieces(articles) {
         paragraphe_apres.innerText = article.paragraphe_apres;
         articleElement.appendChild(paragraphe_apres);
       }
-    } else {
-      // console.log(i);
-
-      // Création d’une balise a
-      const titre1Articles = document.createElement("a");
-      titre1Articles.setAttribute("class", article.chapitre);
-      titre1Articles.innerHTML = article.titre1;
-      // On attache l'article à la section de la page  
-      aside_menu_main.appendChild(titre1Articles);
-    }
+    } 
   }
 }
 
@@ -83,8 +98,8 @@ function genererPieces(articles) {
 document.querySelector("section").innerHTML = '';
 document.querySelector("aside").innerHTML = '';
 // Premier affichage de la page
-genererPieces(articles);
-
+genererArticle(articles, titres);
+genererMenu(titres);
 ///////////////////////////////////////////////////////////////////////
 
 for (let i = 0; i < articles.length; i++) {
@@ -95,10 +110,10 @@ for (let i = 0; i < articles.length; i++) {
 
     let stringParm = `.${article.chapitre}`;
 
-    console.log(stringParm);
+    // console.log(stringParm);
     const boutonFiltrer = document.querySelector(`.${article.chapitre}`);
     // const boutonFiltrer = document.querySelector('#100');
-    console.log(boutonFiltrer);
+    // console.log(boutonFiltrer);
     boutonFiltrer.addEventListener("click", function () {
 
       console.log("clickkkkkk");
@@ -106,9 +121,9 @@ for (let i = 0; i < articles.length; i++) {
         return article2.chapitre == article.chapitre;
       });
       console.log(articlesFiltrees);
-      genererPieces(articlesFiltrees);
+      genererArticle(articlesFiltrees, titres);
       // document.querySelector(".fiches").innerHTML = "";
-      // genererPieces(piecesFiltrees);
+      // genererArticle(piecesFiltrees);
     });
   }
 }

@@ -11,13 +11,13 @@ footer nav {
 footer nav a {
     /* background-color: green; */
     display: block;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 5px;
-    
     flex-basis: 5%;
 
 
+
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     text-align: center;
     font-size: 1em;
     text-decoration: none;

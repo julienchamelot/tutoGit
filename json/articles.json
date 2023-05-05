@@ -139,7 +139,7 @@
         "titre": "Afficher l’historique",
         "commande": "git log",
         "code": " Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (master) <br> $ git log<br>         commit e760d0bed6d97cbca70225a9e60503d245d88d81 (HEAD -> master) <br> Author: Julien C &lt;julien.chamelot@gmail.com> <br>Date: Wed Apr 12 22:44:02 2023 +0200<br>&nbsp;&nbsp;version 3<br>commit 4f125a34d73b4f9fd85881f2bd3ba52e6cf20420<br>Author: Julien C &lt;julien.chamelot@gmail.com> <br>Date: Wed Apr 12 22:43:45 2023 +0200<br>&nbsp;&nbsp;version 2<br>commit f916c4402e2ee8a1a1d240ef413b199f4688b1ef<br>Author: Julien C &lt;julien.chamelot@gmail.com> <br>Date: Wed Apr 12 22:42:06 2023 +0200<br>&nbsp;&nbsp;version 1<br>commit 71854b6c7cb7e31faeb746cb227abd3a73c0f727<br>Author: Julien C &lt;julien.chamelot@gmail.com> <br>Date: Wed Apr 12 22:38:24 2023 +0200<br>&nbsp;&nbsp;création du projet<br>Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (master) <br>$ <br>",
-        "paragraphe_apres": "Ici, on retrouve : l'identifiant des commit, le nom, le mail de l'auteur, la date, et le commentaire de chaque commit<br> <p>Attention git est riche en information, quand le text à afficher est trop long, il ouvre vi pouvoir naviguer dans le texte. Pour quiter vi, il faut taper wq "
+        "paragraphe_apres": "Ici, on retrouve : l'identifiant des commit, le nom, le mail de l'auteur, la date, et le commentaire de chaque commit <br> Attention git est riche en information, quand le text à afficher est trop long, il ouvre vi pouvoir naviguer dans le texte. Pour quiter vi, il faut taper wq "
     },
     {
         "id": 420,

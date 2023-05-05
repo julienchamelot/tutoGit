@@ -12,7 +12,7 @@ aside {
 }
 
 aside a {
-max-width: 200px;
+    max-width: 200px;
     text-decoration: none;
     color: #ccc;
     border: 1px solid;
@@ -30,14 +30,14 @@ aside a:hover {
 
 section {
     flex: 5;
-    margin-top: 5px;    
+    margin-top: 5px;
 }
 
 article {
     margin: 5px;
     border-radius: 5px;
     padding: 10px;
-   
+
 }
 
 article h2 {
@@ -48,7 +48,7 @@ article img {
     width: 100%;
 }
 
-button > img {
+button>img {
     width: 1.3em;
 }
 
@@ -82,5 +82,9 @@ div.code {
 
     aside {
         order: 1;
+    }
+
+    aside a {
+        max-width: 1000px;
     }
 }

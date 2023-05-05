@@ -190,7 +190,7 @@
         "id": 550,
         "chapitre": "branch",
         "titre": "Supprime une branche",
-        "commande": " git branch -d &lt;nom de la branche à supprimer>",
+        "commande": "git branch -d &lt;nom de la branche à supprimer>",
         "code": "Lulu@Lulu-T450 MINGW64 /d/www/tutoGit (master) <br> $ git branch -d dev2 <br> &nbsp;&nbsp;git branch -d  dev2 (was e760d0b).",
         "paragraphe_apres": "Remarque: on ne peut pas supprimer une branche dont les sauvegardes n'ont pas été rassemblées"
     },

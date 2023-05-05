@@ -12,11 +12,11 @@ boutonMenu.addEventListener("click", function () {
     var asideMenu = document.getElementById('asideMenu');
 
     if (menuActif) {
-        imageElement.src = "/images/close.svg";
+        imageElement.src = "images/close.svg";
 
         asideMenu.style.order = "0";
     } else {
-        imageElement.src = "/images/menu.svg";
+        imageElement.src = "images/menu.svg";
 
         asideMenu.style.order = "1";
     }

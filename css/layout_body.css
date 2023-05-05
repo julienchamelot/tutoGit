@@ -3,6 +3,11 @@
 @import url("layout_footer.css");
 @import url("color_style.css");
 
+body{
+    max-width: 1024px;
+    margin: auto ;
+}
+
 header{
     position:sticky;
     top : 0px ;

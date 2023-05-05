@@ -16,5 +16,6 @@
 */
 
 function copierTexte(textAcopier) {
-    navigator.clipboard.writeText(textAcopier)
+    console.log("click !!!!!!!!!!!");
+    navigator.clipboard.writeText(textAcopier);
 }

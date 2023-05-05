@@ -90,6 +90,13 @@ function genererArticle(articles) {
       commandeArticle.innerHTML = article.commande;
       articleElement.appendChild(commandeArticle);
 
+      //<button onclick="copierTexte ('&#34;message&#34; a &lt;copier>')">Copier</button>
+      const pressePaierArticle = document.createElement("button");
+      pressePaierArticle.setAttribute("onclick", `copierTexte(\"${article.commande}\")`);
+      // pressePaierArticle.setAttribute("onclick", "copierTexte ('&#34;message&#34; a &lt;copier>')");
+      pressePaierArticle.innerHTML = "<img src=\"images/content_copy.svg\">";
+      articleElement.appendChild(pressePaierArticle);
+
       const codeArticle = document.createElement("div");
       codeArticle.setAttribute("class", "code");
       codeArticle.innerHTML = article.code;
@@ -108,10 +115,11 @@ function genererArticle(articles) {
 document.querySelector("section").innerHTML = '';
 document.querySelector("aside").innerHTML = '';
 // Premier affichage de la page
-genererArticle(articles);
+// genererArticle(titres);
+genererArticle(titres);
 genererMenu(titres);
 
-///////////////////////////////////////////////////////////////////////
+
 
 for (let i = 0; i < articles.length; i++) {
 

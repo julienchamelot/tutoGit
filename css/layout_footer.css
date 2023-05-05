@@ -11,9 +11,6 @@ footer nav {
 footer nav a {
     /* background-color: green; */
     display: block;
-    flex-basis: 5%;
-
-
 
     margin: 5px;
     border: 1px solid #ddd;

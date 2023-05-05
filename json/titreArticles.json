@@ -24,7 +24,7 @@
         "id": 400,
         "titre": "Affichager l’historique des versions",
         "chapitre": "affichier",
-        "image": "images/git_graph_vscode.png",
+        "image": "images/git_graph_vscode.PNG",
         "paragraphe_avant": "s'y retrouver dans vos verstion de projet "
     },
     {

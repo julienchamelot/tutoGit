@@ -1,7 +1,9 @@
 let menuActif = true
 const boutonMenu = document.querySelector(".aMenu");
 
-boutonMenu.addEventListener("click", function () {
+boutonMenu.addEventListener("click", afficherMenu);
+
+function afficherMenu() {
 
     document.querySelector(".aMenu").innerHTML = "";
 
@@ -10,7 +12,7 @@ boutonMenu.addEventListener("click", function () {
     const imageElement = document.createElement("img");
     imageElement.setAttribute("class", "imgMenu");
     var asideMenu = document.getElementById('asideMenu');
-
+   
     if (menuActif) {
         imageElement.src = "images/close.svg";
 
@@ -23,4 +25,4 @@ boutonMenu.addEventListener("click", function () {
     lienImage.appendChild(imageElement);
     console.log(menuActif);
     menuActif = !menuActif;
-});
+};

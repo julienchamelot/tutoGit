@@ -4,41 +4,41 @@
         "titre": "Naviguer dans l’arborescence des fichiers et répertoires",
         "chapitre": "naviguer",
         "image": "images/git_exe.png",
-        "paragraphe_avant": "Comment naviguer dans les fichier et repertoire, syntaxe particulière de l'invite de commande git"
+        "paragraphe_avant": "Comment naviguer dans les fichiers et répertoires. Quelle est la syntaxe particulière de l'invite de commande git"
     },
     {
         "id": 200,
         "titre": "Initialisation du projet",
         "chapitre": "initilaiser",
         "image": "images/Explorateur.png",
-        "paragraphe_avant": "comment utiliser Git pour créer un nouveau projet"
+        "paragraphe_avant": "Comment utiliser Git pour créer un nouveau projet"
     },
     {
         "id": 300,
         "titre": "Sauvergarder le projet",
         "chapitre": "sauvergarder",
         "image": "images/git-commit.png",
-        "paragraphe_avant": "comment sauvegarder votre projet et revenir en arrière"
+        "paragraphe_avant": "Comment sauvegarder votre projet et revenir en arrière"
     },
     {
         "id": 400,
         "titre": "Affichager l’historique des versions",
         "chapitre": "affichier",
         "image": "images/git_graph_vscode.PNG",
-        "paragraphe_avant": "s'y retrouver dans vos verstion de projet "
+        "paragraphe_avant": "Comment s'y retrouver dans vos versions de projet "
     },
     {
         "id": 500,
         "titre": "Travailler avec les branch",
         "chapitre": "branch",
         "image": "images/git-branch.png",
-        "paragraphe_avant": "utiliser des branches de dévelopement "
+        "paragraphe_avant": "Comment utiliser des branches de dévelopement "
     },
     {
         "id": 600,
         "titre": "Fusionner les branches",
         "chapitre": "fusion",
         "image": "images/git-merge.png",
-        "paragraphe_avant": "Rassember desbranches "
+        "paragraphe_avant": "Comment rassember desbranches "
     }
 ]

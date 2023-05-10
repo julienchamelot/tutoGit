@@ -1,4 +1,4 @@
-// le fichier article.jason est lu 
+// le fichier article.json est lu 
 const reponseArticles = await fetch('json/articles.json');
 // Les objets du fichier article.json sont chargé dans le tableau articles
 const articles = await reponseArticles.json();
@@ -6,13 +6,22 @@ const articles = await reponseArticles.json();
 const reponseTitres = await fetch('json/titreArticles.json');
 const titres = await reponseTitres.json();
 
+let chapitreAffiche = -1 ; // Index de l'article en court 
+
+// Premier affichage de la page
+// genererArticle(titres);
+genererArticle(titres);
+genererMenu(titres);
+
+
 
 function genererMenu(titres) {
-  // On vide le contenu de la balise aside 
-  document.querySelector("aside").innerHTML = '';
-
+  
   // on selectionne la balise aside 
   const aside_menu_main = document.querySelector("aside");
+
+  // On vide le contenu dans la balise aside 
+  aside_menu_main.innerHTML = "";
 
   // on parcout le tableau contenant les titres 
   for (let i = 0; i < titres.length; i++) {
@@ -23,14 +32,15 @@ function genererMenu(titres) {
     // pour chaque titre , on crée d’une balise a
     const titreArticles = document.createElement("a");
 
-    // on prépare les liens avec le format <a href="#" class="titre">titre du chapitre</a></li>
+    // on prépare les liens au le format <a href="#" class="titre">titre du chapitre</a></li>
     titreArticles.setAttribute("class", titre.chapitre);
     titreArticles.setAttribute("href", "#");
     titreArticles.innerHTML = titre.titre;
+
     // On attache l'article à la section de la page  
     aside_menu_main.appendChild(titreArticles);
 
-    // Action associé aux boutons
+    // On gère l'action associé aux liens
     const boutonFiltrer = document.querySelector(`.${titre.chapitre}`);
 
     // fonction executé au clique sur le bouton
@@ -45,7 +55,18 @@ function genererMenu(titres) {
   }
 }
 
-// Fonction qui génère toute la page web
+// Fonction qui permet de d'afficher les articles d'un chapitre en paramètre 
+function filtrerArticles(chapitre) {
+  const articlesFiltrees = articles.filter(function (article) {
+    return article.chapitre == titre.chapitre;
+  });
+  // on evoie l'affichage des article filtrés
+  genererArticle(articlesFiltrees);
+}
+
+
+// Fonction qui génère l'affichage des articles 
+// On passe en paramètre le tableau des articles a afficher
 function genererArticle(articles) {
   document.querySelector("section").innerHTML = '';
 
@@ -53,7 +74,7 @@ function genererArticle(articles) {
   const sectionArticles = document.querySelector(".articles");
 
 
-  // On parcourt chaqu'in des articles passé en paramètre
+  // On parcourt chacun des articles passé en paramètre
   for (let i = 0; i < articles.length; i++) {
 
     // On fait une copie des article un à un 
@@ -111,24 +132,12 @@ function genererArticle(articles) {
   }
 }
 
-// Efface le contenu de la balise body et donc l’écran
-document.querySelector("section").innerHTML = '';
-document.querySelector("aside").innerHTML = '';
-// Premier affichage de la page
-// genererArticle(titres);
-genererArticle(titres);
-genererMenu(titres);
 
+// for (let i = 0; i < articles.length; i++) {
 
-
-for (let i = 0; i < articles.length; i++) {
-
-  // On fait une copie des article un à un 
-  const article = articles[i];
-
-
-
-}
+//   // On fait une copie des article un à un 
+//   const article = articles[i];
+// }
 
 
 
